@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="generator.mapper.ArticleCategoryReferencedMapper">
+
+    <resultMap id="BaseResultMap" type="com.xxg.blog.pojo.ArticleCategoryReferenced">
+            <id property="acrId" column="acr_id" jdbcType="BIGINT"/>
+            <result property="articleId" column="article_id" jdbcType="BIGINT"/>
+            <result property="categoryId" column="category_id" jdbcType="BIGINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        acr_id,article_id,category_id
+    </sql>
+    <insert id="insertSelective">
+        insert into article_category_referenced
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="acrId != null">acr_id,</if>
+            <if test="articleId != null">article_id,</if>
+            <if test="categoryId != null">category_id,</if>
+        </trim>
+        values
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="acrId != null">#{acrId,jdbcType=BIGINT},</if>
+            <if test="articleId != null">#{articleId,jdbcType=BIGINT},</if>
+            <if test="categoryId != null">#{categoryId,jdbcType=BIGINT},</if>
+        </trim>
+    </insert>
+</mapper>
