@@ -1,13 +1,8 @@
 package com.xxg.blog;
 
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.xxg.blog.mapper.ArticleCategoryReferencedMapper;
-import com.xxg.blog.mapper.ArticleMapper;
-import com.xxg.blog.mapper.UsersMapper;
-import com.xxg.blog.pojo.Article;
-import com.xxg.blog.pojo.ArticleCategoryReferenced;
-import com.xxg.blog.pojo.Users;
-import com.xxg.blog.service.UsersService;
+import com.xxg.blog.mapper.UserMapper;
+import com.xxg.blog.entity.User;
+import com.xxg.blog.service.UserService;
 import com.xxg.blog.utils.R;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
@@ -22,10 +17,10 @@ import java.util.List;
 class BlogApplicationTests {
 
     @Autowired
-    UsersMapper userMapper;
+    UserMapper userMapper;
 
     @Autowired
-    UsersService userService;
+    UserService userService;
 
 
     @Test
@@ -34,7 +29,7 @@ class BlogApplicationTests {
 
     @Test
     void allUser() {
-        List<Users> list = userService.list();
+        List<User> list = userService.list();
 
         System.out.println(R.ok().put("data", list));
     }

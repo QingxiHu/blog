@@ -1,4 +1,4 @@
-package com.xxg.blog.pojo;
+package com.xxg.blog.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
@@ -10,6 +10,7 @@ import lombok.Data;
 
 /**
  * 评论 
+ * @author Administrator
  * @TableName discuss
  */
 @TableName(value ="discuss")

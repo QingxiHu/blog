@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">  <!-- 主要是这行代码 官方建议使用 -->
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+
+显示登录用户名：
+<span sec:authentication="name"></span>
+显示当前用户权限：
+方式1： <span sec:authentication="principal.authorities"></span>
+方式2： <span sec:authentication="authorities"></span>
+
+<ul>
+    <li sec:authentication="principal.username"></li>
+    <li sec:authentication="principal.authorities"></li>
+    <li sec:authentication="principal.accountNonExpired"></li>
+    <li sec:authentication="principal.accountNonLocked"></li>
+    <li sec:authentication="principal.credentialsNonExpired"></li>
+</ul>
+
+
+<form th:action="@{/po}" method="post">
+    <input type="submit" value="登录">
+</form>
+</body>
+</html>

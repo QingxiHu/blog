@@ -1,45 +1,35 @@
-package com.xxg.blog.pojo;
+package com.xxg.blog.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
-import java.util.Date;
 import lombok.Data;
 
 /**
- * 标签 
- * @TableName tag
+ * 文章标签 
+ * @author Administrator
+ * @TableName article_tag_referenced
  */
-@TableName(value ="tag")
+@TableName(value ="article_tag_referenced")
 @Data
-public class Tag implements Serializable {
+public class ArticleTagReferenced implements Serializable {
     /**
-     * 标签ID
+     * 引用id
      */
     @TableId(type = IdType.AUTO)
+    private Long atrId;
+
+    /**
+     * 文章id
+     */
+    private Long articleId;
+
+    /**
+     * 标签id
+     */
     private Long tagId;
-
-    /**
-     * 标签名称
-     */
-    private String tagName;
-
-    /**
-     * 标签别名
-     */
-    private String aliasName;
-
-    /**
-     * 标签描述
-     */
-    private String description;
-
-    /**
-     * 创建时间
-     */
-    private Date createTime;
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;

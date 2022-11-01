@@ -2,9 +2,9 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="generator.mapper.ArticleDetailMapper">
+<mapper namespace="com.xxg.blog.mapper.ArticleDetailMapper">
 
-    <resultMap id="BaseResultMap" type="com.xxg.blog.pojo.ArticleDetail">
+    <resultMap id="BaseResultMap" type="com.xxg.blog.entity.ArticleDetail">
             <id property="articleDetailId" column="article_detail_id" jdbcType="BIGINT"/>
             <result property="contentMd" column="content_md" jdbcType="VARCHAR"/>
             <result property="contentHtml" column="content_html" jdbcType="VARCHAR"/>

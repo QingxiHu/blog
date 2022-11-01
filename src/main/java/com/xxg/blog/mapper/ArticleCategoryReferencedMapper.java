@@ -1,10 +1,8 @@
 package com.xxg.blog.mapper;
 
-import com.xxg.blog.pojo.ArticleCategoryReferenced;
+import com.xxg.blog.entity.ArticleCategoryReferenced;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
-
-import javax.annotation.ManagedBean;
 
 /**
  * @Entity ArticleCategoryReferenced

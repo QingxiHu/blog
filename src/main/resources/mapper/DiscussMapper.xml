@@ -2,9 +2,9 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="generator.mapper.DiscussMapper">
+<mapper namespace="com.xxg.blog.mapper.DiscussMapper">
 
-    <resultMap id="BaseResultMap" type="com.xxg.blog.pojo.Discuss">
+    <resultMap id="BaseResultMap" type="com.xxg.blog.entity.Discuss">
             <id property="discussId" column="discuss_id" jdbcType="BIGINT"/>
             <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
             <result property="likeCount" column="like_count" jdbcType="INTEGER"/>

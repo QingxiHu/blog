@@ -1,8 +1,7 @@
 package com.xxg.blog.service;
 
-import com.xxg.blog.pojo.ArticleCategoryReferenced;
+import com.xxg.blog.entity.ArticleCategoryReferenced;
 import com.baomidou.mybatisplus.extension.service.IService;
-import org.springframework.stereotype.Service;
 
 /**
  *
